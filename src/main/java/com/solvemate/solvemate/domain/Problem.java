@@ -19,7 +19,7 @@ public class Problem extends BaseTimeEntity{
     @Column(name = "problem_id")
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id") // 연관관계 주인
     private Member member;
 
