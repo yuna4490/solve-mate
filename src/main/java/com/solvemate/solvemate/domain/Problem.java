@@ -28,9 +28,13 @@ public class Problem extends BaseTimeEntity{
     @Enumerated(EnumType.STRING)
     private Status status;
 
+    //warning: @Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.
+    // @Builder.Default로 해결
+    @Builder.Default
     @OneToMany(mappedBy = "problem", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Review> reviews = new ArrayList<>();
 
+    @Builder.Default
     @OneToMany(mappedBy = "problem", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<ProblemTag> problemTags = new ArrayList<>();
 
