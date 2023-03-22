@@ -1,5 +1,6 @@
-package com.solvemate.solvemate.domain;
+package com.solvemate.solvemate.domain.member;
 
+import com.solvemate.solvemate.domain.BaseTimeEntity;
 import lombok.*;
 
 import javax.persistence.*;

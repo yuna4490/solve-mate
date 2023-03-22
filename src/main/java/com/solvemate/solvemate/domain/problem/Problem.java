@@ -1,9 +1,11 @@
-package com.solvemate.solvemate.domain;
+package com.solvemate.solvemate.domain.problem;
 
+import com.solvemate.solvemate.domain.BaseTimeEntity;
+import com.solvemate.solvemate.domain.review.Review;
+import com.solvemate.solvemate.domain.member.Member;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +15,7 @@ import java.util.List;
 @Entity
 @Getter
 @Builder
-public class Problem extends BaseTimeEntity{
+public class Problem extends BaseTimeEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "problem_id")
