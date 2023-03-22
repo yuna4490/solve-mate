@@ -1,5 +1,6 @@
-package com.solvemate.solvemate.domain;
+package com.solvemate.solvemate.domain.review;
 
+import com.solvemate.solvemate.domain.problem.Problem;
 import lombok.*;
 
 import javax.persistence.*;
@@ -9,18 +10,18 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Builder
-public class ProblemTag {
+public class Review {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "problem_tag_id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "review_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "problem_id")
     private Problem problem;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tag_id")
-    private Tag tag;
+    @Lob
+    private String content;
 
 }

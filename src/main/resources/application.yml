@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:solve-mate
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+#    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true # ???? query? ???
+
+logging:
+  level:
+    org.hibernate.SQL: debug

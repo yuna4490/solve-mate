@@ -1,4 +1,4 @@
-package com.solvemate.solvemate.domain;
+package com.solvemate.solvemate.domain.problem;
 
 import lombok.*;
 
